@@ -130,6 +130,21 @@ nav a:not(:nth-child(1))::before {
     width: 75%;
 }
 
+.short-color {
+    background-color: var(--accent-colour);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.short-color .text {
+    text-align: center;
+}
+.short-color h4 {
+    font-size: 3dvw;
+    font-weight: 700;
+}
+
 .block {
     display: flex;
     width: 100%;
@@ -197,8 +212,8 @@ div.block:nth-child(even) .text {
     border: solid 1px var(--black);
     border-radius: 6px;
     box-shadow: 0px 2px 4px var(--black);
-    margin: 10px;
-    padding: 20px;
+    margin: 0 10px;
+    padding: 0 20px;
     transition: all 0.3s ease-in;
 }
 
@@ -209,7 +224,7 @@ div.block:nth-child(even) .text {
 }
 
 .card>* {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 
@@ -218,7 +233,7 @@ div.block:nth-child(even) .text {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 3dvw;
+    font-size: 2.5dvw;
     height: 3em;
 }
 
@@ -271,6 +286,7 @@ footer {
     margin: 0 10px;
     font-size: inherit;
     transition: all 0.2s linear;
+    color: inherit;
 }
 .socials *:hover {
     color: var(--grey-30);
