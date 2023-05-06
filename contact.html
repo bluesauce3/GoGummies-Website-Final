@@ -33,26 +33,27 @@
         <div class="block b1">
             <div class="text">
                 <h2>block 1</h2>
-                <p>gjv fcdswhgbike rfgsabo;ugrweb o;ugerbjo;b;ogaboj;a gbjagbja gbogabgjfbjgabjoabojabgfbjfgbjfgbj
+                <i class="fa-solid fa-envelope"></i>
+                <p>gjv fcdswhgbike rfgsabo;ugrweb o;ugerbjo;b;ogaboj;a gbjagbja gbog abgjfb jgabjoabojab gfbjfg bjfgbj
                     fgbjga</p>
             </div>
-            <div class="image-wrapper">
-                <img src="https://via.placeholder.com/400x400.png?text=Image+1">
-            </div>
-
         </div>
-
-        <div class="block b2">
-            <div class="text">
-                <h2>block 1</h2>
-                <p>gjv fcdswhgbike rfgsabo;ugrweb o;ugerbjo;b;ogaboj;a gbjagbja gbogabgjfbjgabjoabojabgfbjfgbjfgbj
-                    fgbjga</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="https://via.placeholder.com/400x400.png?text=Image+1">
-            </div>
-
+        <div class="form">
+            <form onsubmit="saveFormData(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+        
+                <input type="submit" value="Submit">
+            </form>
         </div>
+        
+
         <footer>
             <div class="socials">
                 <p>GoGummies 2023</p>
