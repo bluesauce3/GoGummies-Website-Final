@@ -20,10 +20,6 @@ h1 {
     font-size: 7dvw;
 }
 
-h2 {
-    font-size: 4dvw;
-}
-
 h3 {}
 
 p {
@@ -170,7 +166,7 @@ div.block:nth-child(odd) img {
     margin: var(--default-margin);
 }
 
-.block .text {}
+
 
 .block .image-wrapper {
     width: calc(100% - calc(2 * var(--default-margin)));
@@ -210,6 +206,24 @@ div.block:nth-child(odd) img {
     color: var(--grey-70);
     transform: scale(2);
 }
+.b1 .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.b1 .text * {
+    margin: 10px;
+}
+
+@media (max-height: 700px) {
+    .b1 .text {
+        flex-direction: row;
+    }
+    .b1 .text i {
+        margin-left: 20px;
+    }
+}
 
 .cards {
     margin: 0;
@@ -237,50 +251,34 @@ div.block:nth-child(odd) img {
     padding: 0 20px;
     transition: all 0.4s ease;
 }
+.card a {
+    color: var(--black);
+    text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+    transition: all 0.4s ease;
+}
+.card:hover a {
+    text-decoration-color: var(--black);
+}
 
 .card:hover {
     transform: scale(1.07);
 }
-.card:hover i {
-    transform: scale(1.5) rotate(360deg);
-}
-.card:hover i.fa-leaf {
-    transform: scale(1.5) rotate(360deg);
-    animation: leafSpin 1s forwards;
-}
-.card:hover i.fa-wheat-awn {
-    transform: scale(1.5) rotate(360deg);
-    animation: wheatSpin 1s forwards;
-}
-.card:hover i.fa-house {
-    transform: scale(1.5) rotate(360deg);
-    animation: houseSpin 1s forwards;
-}
 .card i {
-    transition: all 0.1s ease;
-}
-@keyframes leafSpin {
-    100%{
-        transform: rotate(360deg);
-        transform: scale(2);
-        color: var(--accent-colour-turq);
-    }
-}
-@keyframes wheatSpin {
-    100%{
-        transform: rotate(360deg);
-        transform: scale(2);
-        color: var(--accent-colour-yellow);
-    }
-}
-@keyframes houseSpin {
-    100%{
-        transform: rotate(360deg);
-        transform: scale(2);
-        color: var(--accent-colour);
-    }
+    transition: all 1s ease;
 }
 
+.card:hover i.fa-leaf {
+    transform: rotate(360deg) scale(2);
+    color: var(--accent-colour-turq);
+}
+.card:hover i.fa-wheat-awn {
+    transform: rotate(360deg) scale(2);
+    color: var(--accent-colour-yellow);
+}
+.card:hover i.fa-house {
+    transform: rotate(360deg) scale(2);
+    color: var(--accent-colour);
+}
 .card>* {
     margin: 10px 0;
 }
@@ -294,8 +292,6 @@ div.block:nth-child(odd) img {
     font-size: 2.5dvw;
     height: 3em;
 }
-
-
 
 .card p {
     font-size: 2.4vmin;
@@ -343,9 +339,12 @@ form {
     align-items: center;
     width: 50%;
     background-color: var(--white);
-    padding: 40px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: var(--grey-70) 0 0 5px;
+    height: 30dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 form * {
     margin: 5px 0 0;
@@ -357,6 +356,7 @@ form input[type=text], form input[type=email], form textarea {
     padding: 5px;
     max-height: 150px;
     font-family: monospace;
+    font-size: 16px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid var(--grey-30);
@@ -391,6 +391,7 @@ label {
 
 textarea {
     resize: vertical;
+    min-height: 2em;
 }
 
 footer {
@@ -400,6 +401,8 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     font-size: 16px;
+    --footer-height: 60px;
+    height: var(--footer-height);
 }
 .socials {
     display: flex;
@@ -411,7 +414,10 @@ footer {
     transition: all 0.2s linear;
     color: inherit;
 }
-.socials *:hover {
+.socials img {
+    height: calc(var(--footer-height) * 0.60);
+}
+.socials *:not(p):hover {
     color: var(--grey-30);
 }
 .back-to-top {
@@ -426,6 +432,7 @@ footer {
     margin-left: 10px;
     font-size: inherit;
 }
+
 
 @media (max-width: 800px) {
     .cards {
