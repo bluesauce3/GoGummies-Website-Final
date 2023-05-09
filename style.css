@@ -181,10 +181,6 @@ div.block:nth-child(odd) img {
     transition: transform 0.2s ease-in-out;
 }
 
-/* .block img:hover {
-    transform: scale(1.07);
-} */
-
 .b2::before {
     content: '';
     --divider-width: 90dvw;
@@ -214,6 +210,10 @@ div.block:nth-child(odd) img {
 }
 .b1 .text * {
     margin: 10px;
+}
+
+.b1 h2 {
+    font-size: 5vmax;
 }
 
 @media (max-height: 700px) {
